@@ -21,6 +21,7 @@ const removeOverlay = () => {
 }
 
 const removeSideNavActive = () => {
+    console.log("remove active")
     document.querySelector('#nav-side')?.classList.remove('active')
     document.querySelectorAll('.overlay')?.forEach(overlay => overlay.classList.remove('active'))
 }
