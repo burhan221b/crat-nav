@@ -18,6 +18,7 @@ const MainContent = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/sign" element={<Sign />} />
                 <Route path="/" element={<Home />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </main>
     )
@@ -80,6 +81,15 @@ function Docs() {
     return <h1>Docs</h1>;
 }
 
+function NotFound() {
+    useEffect(() => {
+        closeSideNav()
+        removeOverlay()
+        return () => {
 
+        }
+    }, [])
+    return <h1>Not Found 404</h1>;
+}
 
 export default MainContent
