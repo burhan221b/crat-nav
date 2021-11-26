@@ -71,6 +71,7 @@ ul {
     // height: 100vh;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -80,6 +81,13 @@ ul {
     transition: 200ms ease-in-out;
     // padding: 1rem;
     padding-top: 1rem;
+
+    :last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        // max-height: 20px;
+    }
 }
 
 #nav-side.active {
@@ -103,7 +111,51 @@ ul {
 }
 
 .nav-side-div {
-    height: 100%;
+    // height: 100%;
+    position: relative;
+    // top:0;
+    &.menu {
+        height: 90%;
+        overflow-y: scroll;
+        ul li {
+            padding: 1rem 1rem 1rem 2rem;
+        }
+        // ul {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: space-around;
+        // }
+    }
+    ul {
+        position: absolute;
+        top: 10px;
+
+        &.left-wing {
+            top: 0;
+            transform: translateX(-300px);
+            transition: all 500ms ease-in-out;
+        }
+        &.right-wing {
+            left: 300px;
+            top: 0;
+            // transform: translateX(300px);
+            transition: all 500ms ease-in-out;
+        }
+        &.chosen-wing {
+            top: 0;
+            transform: translateX(-300px);
+            transition: all 500ms ease-in-out;
+        }
+        &.chosen-main-wing {
+            top: 0;
+            transform: translateX(0px);
+            transition: all 500ms ease-in-out;
+        }
+        // transition: 1000ms ease-in-out;
+        // &.chosen-wing > li:first-child {
+        //     margin-top: 100px !important;
+        // }
+    }
 }
 
 .nav-side-menu-close-container {
@@ -112,15 +164,16 @@ ul {
 }
 
 ul.nav-side-main-topics {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     // height: 100%;
-    height: 90%; // Not 100% b/c o version on bottom
+    // height: 90%; // Not 100% b/c o version on bottom
     // max-height: 100vh;
-    max-height: 90vh;
-    gap: 2rem;
+    // max-height: 90vh;
+    // gap: 2rem;
     overflow-y: scroll;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    width: 300px;
 }
 
 ul.nav-side-main-topics a li {

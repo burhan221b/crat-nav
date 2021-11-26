@@ -26,4 +26,20 @@ const removeSideNavActive = () => {
     document.querySelectorAll('.overlay')?.forEach(overlay => overlay.classList.remove('active'))
 }
 
-export { openSideNav, closeSideNav, removeOverlay, removeSideNavActive }
+const openSideNavTopic = (topic: string) => {
+    console.log("CLICK topic", topic)
+    document.querySelector(`#${topic}`)?.classList.add('chosen-wing');
+    document.querySelector('#SIDE-MAIN-MENU')?.classList.add('left-wing');
+    document.querySelector('#SIDE-MAIN-MENU')?.classList.remove('chosen-main-wing');
+
+}
+
+const closeSideNavTopic = (topic: string) => {
+    document.querySelector(`#${topic}`)?.classList.add('right-wing');
+    document.querySelector(`#${topic}`)?.classList.remove('chosen-wing');
+    document.querySelector('#SIDE-MAIN-MENU')?.classList.remove('left-wing');
+    document.querySelector('#SIDE-MAIN-MENU')?.classList.add('chosen-main-wing');
+
+}
+
+export { openSideNav, closeSideNav, removeOverlay, removeSideNavActive, openSideNavTopic, closeSideNavTopic }

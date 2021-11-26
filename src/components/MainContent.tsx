@@ -14,6 +14,7 @@ const MainContent = () => {
         <main className="main-content">
             <Routes>
                 <Route path="/docs" element={<Docs />} />
+                <Route path="/notes" element={<Notes />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/sign" element={<Sign />} />
@@ -79,6 +80,17 @@ function Docs() {
         }
     }, [])
     return <h1>Docs</h1>;
+}
+
+function Notes() {
+    useEffect(() => {
+        closeSideNav()
+        removeOverlay()
+        return () => {
+
+        }
+    }, [])
+    return <h1>Notes</h1>;
 }
 
 function NotFound() {
