@@ -70,24 +70,24 @@ ul {
     position: fixed;
     // height: 100vh;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    // display: flex;
+    // justify-content: space-around;
+    // flex-direction: column;
     top: 0;
     left: 0;
     left: -300px;
     transition: 200ms ease-in-out;
     // padding: 1rem;
-    padding-top: 1rem;
-
-    :last-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        // max-height: 20px;
-    }
+    // padding-top: 1rem;
+    // For version div
+    // div:last-child {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: flex-start;
+    //     // max-height: 20px;
+    // }
 }
 
 #nav-side.active {
@@ -105,27 +105,35 @@ ul {
     padding: 0 1rem;
 }
 
-#nav-side-menu-close {
-    align-self: flex-start;
-    margin-left: 1rem;
+div.nav-side-menu-close-container {
+    display: flex;
+    align-content: center;
+    height: 70px;
+    background-color: gray;
+    #nav-side-menu-close {
+        align-self: center;
+        margin-left: 1rem;
+    }
 }
 
 .nav-side-div {
     // height: 100%;
     position: relative;
+
     // top:0;
-    &.menu {
-        height: 90%;
-        overflow-y: scroll;
-        ul li {
-            padding: 1rem 1rem 1rem 2rem;
-        }
-        // ul {
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: space-around;
-        // }
-    }
+    // &.menu {
+    //     height: 90%;
+    //     overflow-y: scroll;
+    //     ul li {
+    //         padding: 1rem 1rem 1rem 2rem;
+    //     }
+    //     // ul {
+    //     //     display: flex;
+    //     //     flex-direction: column;
+    //     //     justify-content: space-around;
+    //     // }
+    // }
+
     ul {
         position: absolute;
         top: 10px;
@@ -156,11 +164,6 @@ ul {
         //     margin-top: 100px !important;
         // }
     }
-}
-
-.nav-side-menu-close-container {
-    // max-height: 200px;
-    max-height: 50px;
 }
 
 ul.nav-side-main-topics {
@@ -246,6 +249,24 @@ nav .nav-html-icons {
 
 #main-container {
     padding: 1rem;
+}
+
+.menu-display {
+    overflow-y: hidden;
+}
+
+.menu {
+    height: 500px;
+    // overflow-y: scroll;
+    // overflow-y: hidden;
+    ul {
+        height: 600px;
+        // height: 50%;
+        overflow-y: scroll !important;
+        li {
+            padding: 1rem 1rem 1rem 2rem;
+        }
+    }
 }
 
 /* MEDIA QUERY */
