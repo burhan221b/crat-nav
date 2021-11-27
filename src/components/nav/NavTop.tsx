@@ -7,13 +7,13 @@ const NavTop = () => {
         openSideNav()
     }, [])
     return (
-        <nav id="nav-top">
-            <button className="mobile" id="nav-top-menu-bar">&#9776;</button>
-            <div className="nav-top-div">
+        <nav id="NavTop">
+            <button className="mobile" id="NavTopOpenBtn">&#9776;</button>
+            <div className="NavTop-div">
                 <h2>LOGO</h2>
             </div>
-            <div className="nav-top-div desktop">
-                <ul className="nav-top-ul">
+            <div className="NavTop-div desktop">
+                <ul className="NavTop-ul">
                     {/* {createMenuLinks()} */}
                     <li><Link to="/" >Home</Link></li>
                     <li><Link to="/docs">Docs</Link></li>

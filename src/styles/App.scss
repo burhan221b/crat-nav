@@ -47,14 +47,14 @@ nav {
 }
 
 #NavSide,
-#nav-top {
+#NavTop {
     background-color: #ffffff;
     color: #1650a7;
     border: 1px solid rgba(146, 146, 146, 0.5);
     z-index: 10;
 }
 
-#nav-top-menu-bar,
+#NavTopOpenBtn,
 #NavSideCloseBtn {
     cursor: pointer;
     font-size: 1.5rem;
@@ -70,7 +70,7 @@ nav ul a li {
 }
 
 //! NavTop Styles
-#nav-top {
+#NavTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,12 +250,12 @@ nav .version {
     .mobile {
         display: none;
     }
-    .nav-top-div {
+    .NavTop-div {
         width: 100%;
         &.desktop {
             display: block;
         }
-        .nav-top-ul {
+        .NavTop-ul {
             display: flex;
             width: 100%;
             justify-content: space-around;

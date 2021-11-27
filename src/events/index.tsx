@@ -1,6 +1,6 @@
 //! V2
 const openSideNav = () => {
-    document.querySelector('#nav-top-menu-bar')?.addEventListener('click', () => {
+    document.querySelector('#NavTopOpenBtn')?.addEventListener('click', () => {
         document.querySelector('#NavSide')?.classList.add('active')
         document.querySelectorAll('.overlay')?.forEach(overlay => overlay.classList.add('active'))
     })
